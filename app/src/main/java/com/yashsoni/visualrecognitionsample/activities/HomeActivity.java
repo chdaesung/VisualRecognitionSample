@@ -49,7 +49,7 @@ public class HomeActivity extends AppCompatActivity {
         .imagesFile(imagesStream)
         .imagesFilename("fruitbowl.jpg")
         .threshold((float) 0.6)
-        .classifierIds(Arrays.asList("your_visual_recognition_custom_model_id))
+        .classifierIds(Arrays.asList("your_visual_recognition_custom_model_id"))
         .build();
 
     ClassifiedImages result = service.classify(classifyOptions).execute();
@@ -71,7 +71,7 @@ public class HomeActivity extends AppCompatActivity {
             ClassifyOptions classifyOptions = new ClassifyOptions.Builder()
                     .url(etUrl.getText().toString())
                     //.classifierIds(Collections.singletonList("explicit"))
-                    .classifierIds(Arrays.asList("DefaultCustomModel_1726894899"))
+                    .classifierIds(Arrays.asList("your_visual_recognition_custom_model_id"))
                     .threshold(threshold)
                     .owners(Collections.singletonList("me"))
                     .build();
