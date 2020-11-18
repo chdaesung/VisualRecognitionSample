@@ -34,7 +34,7 @@ import java.util.Arrays;
 public class HomeActivity extends AppCompatActivity {
 
     // IBM WATSON VISUAL RECOGNITION RELATED
-    private final String API_KEY = "zVUfOWtdQSZOwZGSJ6QLWn7iUkWNBtcIiCSApFfXcn81";
+    private final String API_KEY = "your_visual_recognition_apikey";
 
     Button btnFetchResults;
     EditText etUrl;
@@ -49,7 +49,7 @@ public class HomeActivity extends AppCompatActivity {
         .imagesFile(imagesStream)
         .imagesFilename("fruitbowl.jpg")
         .threshold((float) 0.6)
-        .classifierIds(Arrays.asList("DefaultCustomModel_1726894899"))
+        .classifierIds(Arrays.asList("your_visual_recognition_custom_model_id))
         .build();
 
     ClassifiedImages result = service.classify(classifyOptions).execute();
